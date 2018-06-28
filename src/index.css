@@ -95,3 +95,21 @@ textarea:focus,
 input:focus {
   outline: none;
 }
+
+/*Typist*/
+
+.header {
+  font-size: 68px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
