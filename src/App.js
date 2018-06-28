@@ -19,7 +19,7 @@ const SubTitle = styled.div`
 const EmailContainer = styled.div`
   border-bottom: 2px solid rgb(0, 0, 0, 0.2);
   margin-top: 2em;
-  height: 30px;
+  height: 60px;
 `;
 
 const Email = styled.a`
