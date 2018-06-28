@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 import Typist from 'react-typist';
+import Icon from './Icon';
 import './index.css';
 import 'react-typist/dist/Typist.css';
 
@@ -15,15 +16,38 @@ const SubTitle = styled.div`
   margin-top: 2em;
 `;
 
+const EmailContainer = styled.div`
+  border-bottom: 2px solid rgb(0, 0, 0, 0.2);
+  margin-top: 2em;
+  height: 30px;
+`;
+
+const Email = styled.a`
+  text-decoration: none;
+`;
+
+const SubContainer = styled.div`
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      renderMsg: false
+      renderMsg: false,
+      social: false
     };
   }
   onHeaderTyped = () => {
     this.setState({renderMsg: true});
+  };
+
+  showSocialMedia = () => {
+    this.setState({social: true});
   };
 
   render() {
@@ -52,19 +76,38 @@ class App extends Component {
               startDelay={200}
               stdTypingDelay={25}
               avgTypingDelay={50}
+              onTypingDone={this.showSocialMedia}
               cursor={{hideWhenDone: true, show: true}}
             >
               Computer Science Student.
-              <Typist.Delay ms={1250} />
+              <Typist.Delay ms={700} />
               <br />
               Blockchain Passionate.
-              <Typist.Delay ms={1250} />
+              <Typist.Delay ms={700} />
               <br />
               React Lover.
-              <Typist.Delay ms={1250} />
+              <Typist.Delay ms={700} />
             </Typist>
           ) : null}
         </SubTitle>
+        {this.state.social ? (
+          <SubContainer>
+            <EmailContainer>
+              <Email
+                href="mailto:lucas@sciencematters.io?Subject=Hi%20Lucas"
+                target="_top"
+              >
+                lucas.pelloni@sciencematters.io
+              </Email>
+            </EmailContainer>
+
+            <SubTitle>
+              <Icon icon={'github'} width={45} height={45} />
+              <Icon icon={'instagram'} width={45} height={45} />
+              <Icon icon={'linkedin'} width={45} height={45} />
+            </SubTitle>
+          </SubContainer>
+        ) : null}
       </Container>
     );
   }
