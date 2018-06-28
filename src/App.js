@@ -102,9 +102,20 @@ class App extends Component {
             </EmailContainer>
 
             <SubTitle>
-              <Icon icon={'github'} width={45} height={45} />
-              <Icon icon={'instagram'} width={45} height={45} />
-              <Icon icon={'linkedin'} width={45} height={45} />
+              <a href="https://github.com/lucaspelloni2" target="_blank">
+                <Icon icon={'github'} width={45} height={45} />
+              </a>
+
+              <a
+                href="https://www.instagram.com/lucas.pelloni/"
+                target="_blank"
+              >
+                <Icon icon={'instagram'} width={45} height={45} />
+              </a>
+
+              <a href="https://www.linkedin.com/in/lucas-pelloni-980729133/">
+                <Icon icon={'linkedin'} width={45} height={45} />
+              </a>
             </SubTitle>
           </SubContainer>
         ) : null}
