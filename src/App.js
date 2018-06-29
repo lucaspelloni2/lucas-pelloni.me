@@ -4,6 +4,7 @@ import Profile from './Profile';
 
 import './index.css';
 import 'react-typist/dist/Typist.css';
+import Portfolio from './Portfolio';
 
 const Container = styled.div`
   display: flex;
@@ -12,16 +13,23 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
-const Header = styled.div`
-  width: 100%;
-`;
-
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      onTypingDone: false
+    };
+  }
   render() {
     return (
       <Container>
-        <Header />
-        <Profile />
+        <Profile
+          onTypingDone={() => {
+            this.setState({typingDone: true});
+          }}
+        />
+
+        {this.state.typingDone ? <Portfolio /> : null}
       </Container>
     );
   }

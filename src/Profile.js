@@ -62,6 +62,7 @@ class Profile extends Component {
 
   showSocialMedia = () => {
     this.setState({social: true});
+    this.props.onTypingDone();
   };
 
   render() {
