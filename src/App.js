@@ -77,7 +77,7 @@ class App extends Component {
               stdTypingDelay={25}
               avgTypingDelay={50}
               onTypingDone={this.showSocialMedia}
-              cursor={{hideWhenDone: true, show: true}}
+              cursor={{hideWhenDone: falsey, show: true}}
             >
               Computer Science Student.
               <Typist.Delay ms={700} />
