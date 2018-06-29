@@ -8,7 +8,14 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
+
+  position: absolute;
+  left: ${props => (props.typed ? 0 : null)};
+  border-right: ${props => (props.typed ? '1px solid rgb(0,0,0,0.25)' : null)};
+  top: 0;
+  width: 50%;
   height: 100vh;
+  transition: 2s ease-in-out;
 `;
 
 const SubTitle = styled.div`
@@ -67,7 +74,7 @@ class Profile extends Component {
 
   render() {
     return (
-      <Container>
+      <Container typed={this.state.social}>
         {this.state.social ? (
           <div
             style={{
