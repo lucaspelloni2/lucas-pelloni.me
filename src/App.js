@@ -10,17 +10,18 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
 `;
 
+const Header = styled.div`
+  width: 100%;
+`;
 
 class App extends Component {
-
-
   render() {
     return (
       <Container>
-          <Profile />
+        <Header />
+        <Profile />
       </Container>
     );
   }

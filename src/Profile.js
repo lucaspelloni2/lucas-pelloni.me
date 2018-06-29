@@ -4,7 +4,12 @@ import Typist from 'react-typist';
 import Icon from './Icon';
 import Fade from 'react-reveal/Fade';
 
-const Container = styled.div``;
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+`;
 
 const SubTitle = styled.div`
   margin-top: 2em;
@@ -63,7 +68,13 @@ class Profile extends Component {
     return (
       <Container>
         {this.state.social ? (
-          <div>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}
+          >
             {' '}
             <Fade top cascade>
               <Me src="me.jpg" />
