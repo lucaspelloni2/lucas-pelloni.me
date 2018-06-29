@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import styled from 'styled-components';
 import Typist from 'react-typist';
 import Icon from './Icon';
+import Fade from 'react-reveal/Fade';
+
 import './index.css';
 import 'react-typist/dist/Typist.css';
 
@@ -34,6 +36,12 @@ const SubContainer = styled.div`
   flex-direction: column;
 `;
 
+const Me = styled.img`
+  width: 220px;
+  border-radius: 50%;
+  height: auto;
+`;
+
 class App extends Component {
   constructor() {
     super();
@@ -53,6 +61,14 @@ class App extends Component {
   render() {
     return (
       <Container>
+        {this.state.social ? (
+          <div>
+            {' '}
+            <Fade top cascade>
+              <Me src="me.jpg" />
+            </Fade>
+          </div>
+        ) : null}
         <Typist
           className="header"
           stdTypingDelay={40}
@@ -91,33 +107,37 @@ class App extends Component {
           ) : null}
         </SubTitle>
         {this.state.social ? (
-          <SubContainer>
-            <EmailContainer>
-              <Email
-                href="mailto:lucas@sciencematters.io?Subject=Hi%20Lucas"
-                target="_top"
-              >
-                lucas.pelloni@sciencematters.io
-              </Email>
-            </EmailContainer>
+          <div>
+            <Fade bottom cascade>
+              <SubContainer>
+                <EmailContainer>
+                  <Email
+                    href="mailto:lucas@sciencematters.io?Subject=Hi%20Lucas"
+                    target="_top"
+                  >
+                    lucas.pelloni@sciencematters.io
+                  </Email>
+                </EmailContainer>
 
-            <SubTitle>
-              <a href="https://github.com/lucaspelloni2" target="_blank">
-                <Icon icon={'github'} width={45} height={45} />
-              </a>
+                <SubTitle>
+                  <a href="https://github.com/lucaspelloni2" target="_blank">
+                    <Icon icon={'github'} width={45} height={45} />
+                  </a>
 
-              <a
-                href="https://www.instagram.com/lucas.pelloni/"
-                target="_blank"
-              >
-                <Icon icon={'instagram'} width={45} height={45} />
-              </a>
+                  <a
+                    href="https://www.instagram.com/lucas.pelloni/"
+                    target="_blank"
+                  >
+                    <Icon icon={'instagram'} width={45} height={45} />
+                  </a>
 
-              <a href="https://www.linkedin.com/in/lucas-pelloni-980729133/">
-                <Icon icon={'linkedin'} width={45} height={45} />
-              </a>
-            </SubTitle>
-          </SubContainer>
+                  <a href="https://www.linkedin.com/in/lucas-pelloni-980729133/">
+                    <Icon icon={'linkedin'} width={45} height={45} />
+                  </a>
+                </SubTitle>
+              </SubContainer>
+            </Fade>
+          </div>
         ) : null}
       </Container>
     );
