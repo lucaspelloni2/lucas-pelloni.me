@@ -42,6 +42,15 @@ const Me = styled.img`
   height: auto;
 `;
 
+const Separator = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid rgb(0, 0, 0, 0.2);
+  height: 60px;
+  width: 75%;
+`;
+
 class App extends Component {
   constructor() {
     super();
@@ -139,6 +148,8 @@ class App extends Component {
             </Fade>
           </div>
         ) : null}
+
+        {this.state.social ? <Separator /> : null}
       </Container>
     );
   }
