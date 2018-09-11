@@ -20,17 +20,14 @@ const ApplicationContainer = styled.div``;
 class Portfolio extends Component {
   constructor() {
     super();
-    this.state = {
-      applications: applications
-    };
   }
   render() {
     return (
       <Container>
-        <Title>My (D)-Applications</Title>
+        <Title>My Projects</Title>
 
         <ApplicationContainer>
-          {this.state.applications.map(app => {
+          {applications.map(app => {
             return <Application app={app}>{app.description}</Application>;
           })}
         </ApplicationContainer>

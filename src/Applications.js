@@ -1,4 +1,4 @@
-const applications = [
+export const applications = [
   {
     name: 'Dapp Tic-Tac-Toe',
     link: 'http://www.tictactoe.bet/',

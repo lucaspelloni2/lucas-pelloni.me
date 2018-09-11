@@ -9,7 +9,7 @@ const Container = styled.div`
   justify-content: center;
   flex-direction: column;
 
-  position: absolute;
+  position: fixed;
   left: ${props => (props.typed ? 0 : null)};
   border-right: ${props => (props.typed ? '1px solid rgb(0,0,0,0.25)' : null)};
   top: 0;
