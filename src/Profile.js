@@ -132,10 +132,10 @@ class Profile extends Component {
               <SubContainer>
                 <EmailContainer>
                   <Email
-                    href="mailto:lucas@sciencematters.io?Subject=Hi%20Lucas"
+                    href="mailto:lucas.pelloni@axelra.com?Subject=Hi%20Lucas"
                     target="_top"
                   >
-                    lucas.pelloni@sciencematters.io
+                    lucas.pelloni@axelra.com
                   </Email>
                 </EmailContainer>
 
